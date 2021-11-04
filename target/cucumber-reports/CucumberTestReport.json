@@ -1,0 +1,92 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 11185140900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Initializer.beforeHooks(Scenario)"
+            }
+          }
+        ],
+        "line": 5,
+        "name": "Execute all information from Actor Table",
+        "description": "",
+        "id": "database-sql-query-feature-scenarios;execute-all-information-from-actor-table",
+        "after": [
+          {
+            "result": {
+              "duration": 828819900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Initializer.afterHooks(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2977004000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User connects to PostgreSql Database",
+            "match": {
+              "location": "DataBaseStepDefinition.user_connects_to_postgreSQL_database()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4624100,
+              "error_message": "java.lang.NullPointerException\r\n\tat utilities.DataBaseUtility.runQuery(DataBaseUtility.java:66)\r\n\tat stepDefinitions.DataBaseStepDefinition.user_sends_query(DataBaseStepDefinition.java:22)\r\n\tat ✽.When User sends querry \u0027select * from public.city where country_id \u003d 44 order by city\u0027(Features/DataBaseFeature.feature:7)\r\n",
+              "status": "failed"
+            },
+            "line": 7,
+            "name": "User sends querry \u0027select * from public.city where country_id \u003d 44 order by city\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "select * from public.city where country_id \u003d 44 order by city",
+                  "offset": 19
+                }
+              ],
+              "location": "DataBaseStepDefinition.user_sends_query(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "User should get all information from that table",
+            "match": {
+              "location": "DataBaseStepDefinition.user_should_get_all_information_from_that_table()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 4,
+            "name": "@testDB"
+          }
+        ]
+      }
+    ],
+    "name": "DataBase SQL query Feature Scenarios",
+    "description": "",
+    "id": "database-sql-query-feature-scenarios",
+    "keyword": "Feature",
+    "uri": "Features/DataBaseFeature.feature"
+  }
+]
